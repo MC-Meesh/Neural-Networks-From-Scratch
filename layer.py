@@ -3,7 +3,7 @@ class Layer:
         self.input = None
         self.output = None
 
-    def forward(self, input):
+    def forward(self, x):
         '''
         Forward propogation: Takes in a tensor input and 
         returns some transformation as output
