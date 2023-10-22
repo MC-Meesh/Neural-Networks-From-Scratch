@@ -7,23 +7,23 @@ class Dense(Layer):
         input_size: number of specified rows for input
         output_size: number of specified neurons in output from layer
 
-        weights: A 2d matrix of shape (m, n) = (input_size, ouptut_size)
-        bias: A vector of shape (1, n) introduced to model to offset acitvations and break symmetry
+        weights: A 2d matrix of shape (m, n) = (output_size, input_size)
+        bias: A vector of shape (m, 1) introduced to model to offset acitvations and break symmetry
         '''
         
-        self.weights = np.random.randn(x_size, y_size)
-        self.bias = np.random.randn(1, y_size)
+        self.weights = np.random.randn(y_size, x_size)
+        self.bias = np.random.randn(y_size, 1)
     
     def forward(self, input):
         '''
         Forward propogation, taking in some tensor X as input
-        Return the dot product between input and Weights + biases (Y = XW+B)
+        Return the dot product between input and Weights + biases (Y = WX+B)
         '''
         self.input = input
-        return  np.dot(self.input, self.weights) + self.bias
+        return  np.dot(self.weights, self.input) + self.bias
     
     def backward(self, y_gradient, learning_rate):
-        weight_gradient = np.dot(self.input.T, y_gradient)
+        weight_gradient = np.dot(y_gradient, self.input.T)
         self.weights -= learning_rate * weight_gradient #update weights
-        self.bias -= learning_rate * np.sum(y_gradient, axis=0)
-        return np.dot(y_gradient, self.weights.T) #Return dL/dx for next layer
+        self.bias -= learning_rate * y_gradient
+        return np.dot(self.weights.T, y_gradient) #Return dL/dx for next layer
