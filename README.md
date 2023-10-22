@@ -1,3 +1,3 @@
 # Neural-Networks-From-Scratch
 
-[View the report](Neural_Networks_From_Scratch.pdf)
+[Neural_Networks_From_Scratch.pdf](https://nbviewer.jupyter.org/github/MC-Meesh/Neural-Networks-From-Scratch/blob/main/Neural_Networks_From_Scratch.pdf)
