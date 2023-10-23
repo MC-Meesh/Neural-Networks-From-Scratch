@@ -1,6 +1,4 @@
-
-
-# [Read the Full Paper Here](Neural_Networks_From_Scratch.pdf)
+# [Read the Full Paper Here (PDF)](Neural_Networks_From_Scratch.pdf)
 
 # Neural Networks From Scratch
 
