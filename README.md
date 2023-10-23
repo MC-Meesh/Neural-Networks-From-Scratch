@@ -23,7 +23,7 @@ network = [
 ]
 ```
 
-Train the model using the following:
+Train the model using the following function, defined in the _network.py_ file:
 ```python
 train(network, mse, mse_prime, X, Y, epochs=10000, learning_rate=0.1)
 ```
