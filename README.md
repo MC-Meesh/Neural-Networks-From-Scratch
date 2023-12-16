@@ -1,4 +1,4 @@
-# [Read the Paper Here (PDF)](https://github.com/MC-Meesh/Neural-Networks-From-Scratch/blob/main/Neural_Networks_From_Scratch.pdf)
+# [Read the Paper Here (PDF)](https://drive.google.com/file/d/1R8noScHVSGUBKNlma1Wo2Ycfaoz2b64m/view)
 
 
 # Neural Networks From Scratch
